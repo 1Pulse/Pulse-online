@@ -95,4 +95,34 @@
   
   
 
-  
+  // Open the booklet modal
+function openBookletModal() {
+  document.getElementById('bookletModal').style.display = 'flex';
+  showPage(1);
+}
+
+// Close the booklet modal
+function closeBookletModal() {
+  document.getElementById('bookletModal').style.display = 'none';
+}
+
+// Show the specified page
+function showPage(pageNumber) {
+  const pages = document.querySelectorAll('.modal-page');
+  pages.forEach((page, index) => {
+    page.style.display = (index + 1 === pageNumber) ? 'block' : 'none';
+  });
+}
+
+// Move to the next page in the modal
+function nextPage(pageNumber) {
+  showPage(pageNumber);
+}
+
+// Close modal when clicking outside content
+window.onclick = function(event) {
+  const modal = document.getElementById('bookletModal');
+  if (event.target === modal) {
+    closeBookletModal();
+  }
+}

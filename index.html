@@ -17,19 +17,45 @@
   </head>
 <body>
   <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo"><a href="index.html" style="text-decoration: none; color: white;">1Pulse</a></h1>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <ul class="nav-links">
-        <li><a href="pulse.html#about">About Pulse</a></li>
-        <li><a href="community.html#gjns">GJNW & Community</a></li>
-        <li><a href="errand.html#errand-camel">Errand Camel</a></li>
-        <li><a href="africa.html#africa-city">Africa City</a></li>
-        <li><a href="contact.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+   <!-- Header Section -->
+<header>
+  <nav class="navbar">
+    <h1 class="logo"><a href="index.html" style="text-decoration: none; color: white;">1Pulse</a></h1>
+    <a href="#" class="booklet-link" onclick="openBookletModal()">Get our <span>Booklet</span></a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="pulse.html#about">About Pulse</a></li>
+      <li><a href="community.html#gjns">GJNW & Community</a></li>
+      <li><a href="errand.html#errand-camel">Errand Camel</a></li>
+      <li><a href="africa.html#africa-city">Africa City</a></li>
+      <li><a href="contact.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Booklet Modal -->
+<div id="bookletModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeBookletModal()">&times;</span>
+    <div class="modal-page" id="modal-page-1">
+      <h2>Booklet Preview - Page 1</h2>
+      <p>Discover insights on community safety, engagement tips, and how to build your own neighborhood watch.</p>
+      <button onclick="nextPage(2)">Next</button>
+    </div>
+    <div class="modal-page" id="modal-page-2" style="display: none;">
+      <h2>Booklet Preview - Page 2</h2>
+      <p>Learn from case studies of successful communities working together to reduce crime and improve their environment.</p>
+      <button onclick="nextPage(3)">Next</button>
+    </div>
+    <div class="modal-page" id="modal-page-3" style="display: none;">
+      <h2>Get the Full Booklet</h2>
+      <p>Purchase the complete booklet and become a key player in your community's safety and growth.</p>
+      <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="cta-button">Proceed</a>
+    </div>
+  </div>
+</div>
+
+
   
 
   <!-- Hero Section -->
@@ -122,7 +148,7 @@ showSlide(currentSlide); // Show the initial slide
     <div class="network-card" style="background-image: url('images/24.jpg');">
       <h3>Buy The BookLet</h3>
       <p>Buy our booklet and start your own Neighborhood Watch</p>
-      <button onclick="showModal('registerWatch')">Register</button>
+      <a href="shop.html#contact">Shop</a>
     </div>
   </div>
   <div id="modal" class="modal">
