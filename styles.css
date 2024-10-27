@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #1a237e;
   }
   
   .logo {
@@ -119,8 +120,10 @@
       display: none; /* Hide links initially */
       flex-direction: column; /* Stack vertically */
       position: absolute;
-      background-color: #333;
+      padding-top:;
+      background: #1a237e;
       width: 100%;
+      padding:  150px 0  15px 0;
       z-index: 1; /* Ensure it appears on top */
     }
   
