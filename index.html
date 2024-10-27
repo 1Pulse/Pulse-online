@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1Pulse Online</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1Pulse Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png"> <!-- Icon link -->
+    <!-- SEO Metadata -->
+    <meta name="description" content="1Pulse - Empowering Communities by Enhancing Safety, Reducing Pollution, and Fostering Inclusivity with GJNW, Errand Camel, and Africa City.">
+    <meta name="keywords" content="community safety, neighborhood watch, inclusivity, crime prevention, community support">
+    <meta name="author" content="1Pulse">
+    <!-- Add this in the <head> section -->
+<!-- Alternative format for PNG -->
+<link rel="icon" href="images/gjnw logo.png" type="image/png">
+
+  </head>
 <body>
   <!-- Navigation -->
   <header>
@@ -24,48 +33,66 @@
   
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Empowering Communities Together</h2>
-      <p>Join 1Pulse in making our neighborhoods safer, cleaner, and more united.</p>
-      <a href="#about" class="cta-button">Learn More</a>
+  <section class="hero-carousel">
+    <div class="carousel-slide">
+      <img src="images/20.jpg" alt="Community Empowerment">
+      <img src="images/23.jpg" alt="Neighborhood Safety">
+      <img src="images/24.jpg" alt="Inclusivity and Support">
     </div>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
   </section>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide img');
+
+    function showSlide(n) {
+      currentSlide = (n + slides.length) % slides.length;
+      slides.forEach((slide, index) => {
+        slide.style.display = (index === currentSlide) ? 'block' : 'none';
+      });
+    }
+    function moveSlide(step) {
+      showSlide(currentSlide + step);
+    }
+    showSlide(currentSlide);
+  </script>
+
   <div class="card-container">
-    <div class="card" onclick="showPopup('reportCase')">
+    <div class="card"  style="background-image: url('images/24.jpg');" onclick="showPopup('reportCase')">
       <h3>Report a Case</h3>
       <p>Click here to report any incidents in your community.</p>
     </div>
-    <div class="card" onclick="showPopup('causeCard')">
+    <div class="card" style="background-image: url('images/24.jpg');" onclick="showPopup('causeCard')">
       <h3>Cause Card</h3>
       <p>Learn more about our cause cards and how to support them.</p>
     </div>
-    <div class="card" onclick="showPopup('jobCard')">
+    <div class="card" style="background-image: url('images/24.jpg');" onclick="showPopup('jobCard')">
       <h3>Job Card</h3>
       <p>Find out how to apply for job positions through us.</p>
     </div>
-    <div class="card" onclick="showPopup('nomination')">
+    <div class="card" style="background-image: url('images/24.jpg');" onclick="showPopup('nomination')">
       <h3>Nomination Form</h3>
       <p>Nominate a community for workshops and support.</p>
     </div>
-    <div class="card" onclick="showPopup('complaint')">
+    <div class="card" style="background-image: url('images/24.jpg');" onclick="showPopup('complaint')">
       <h3>Complaint Form</h3>
       <p>File a complaint directly through our portal.</p>
     </div>
   </div>
   <div class="network-section">
-    <div class="network-card">
+    <div class="network-card" style="background-image: url('images/24.jpg');">
       <h3>Register Neighborhood Watch</h3>
       <p>Join our initiative to enhance safety in your community by establishing a Neighborhood Watch. Together, we can monitor and protect our neighborhoods.</p>
       <button onclick="showModal('registerWatch')">Register</button>
     </div>
-    <div class="network-card">
+    <div class="network-card" style="background-image: url('images/24.jpg');">
       <h3>Join Business Network</h3>
       <p>Become a part of our Business Network to support community safety and growth. Collaborate with local businesses to create a safer environment.</p>
       <button onclick="showModal('joinNetwork')">Join</button>
     </div>
     
-    <div class="network-card">
+    <div class="network-card" style="background-image: url('images/24.jpg');">
       <h3>Buy The BookLet</h3>
       <p>Buy our booklet and start your own Neighborhood Watch</p>
       <button onclick="showModal('registerWatch')">Register</button>
@@ -108,6 +135,19 @@
     <h2>Contact Us</h2>
     <p>Get in touch to learn more or find out how you can get involved.</p>
   </section>
+
+  <footer>
+    <nav class="sitemap">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pulse.html#about">About Pulse</a></li>
+        <li><a href="community.html#gjns">GJNW & Community</a></li>
+        <li><a href="errand.html#errand-camel">Errand Camel</a></li>
+        <li><a href="africa.html#africa-city">Africa City</a></li>
+        <li><a href="contact.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
 
   <script src="scripts.js"></script>
 </body>
