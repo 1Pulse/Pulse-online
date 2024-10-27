@@ -18,20 +18,24 @@
 <body>
   <!-- Navigation -->
    <!-- Header Section -->
-<header>
-  <nav class="navbar">
-    <h1 class="logo"><a href="index.html" style="text-decoration: none; color: white;">1Pulse</a></h1>
-    <a href="#" class="booklet-link" onclick="openBookletModal()">Get our <span>Booklet</span></a>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links">
-      <li><a href="pulse.html#about">About Pulse</a></li>
-      <li><a href="community.html#gjns">GJNW & Community</a></li>
-      <li><a href="errand.html#errand-camel">Errand Camel</a></li>
-      <li><a href="africa.html#africa-city">Africa City</a></li>
-      <li><a href="contact.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+   <header>
+    <nav class="navbar">
+      <h1 class="logo"><a href="index.html" style="text-decoration: none; color: white;">1Pulse</a></h1>
+      <a href="#" class="booklet-link" onclick="openBookletModal()">Get our <span>Booklet</span></a>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+     
+      <ul class="nav-links">
+         <!-- Close button -->
+         <div class="close-btn" onclick="toggleMenu()">✕</div>
+        <li><a href="pulse.html#about">About Pulse</a></li>
+        <li><a href="community.html#gjns">GJNW & Community</a></li>
+        <li><a href="errand.html#errand-camel">Errand Camel</a></li>
+        <li><a href="africa.html#africa-city">Africa City</a></li>
+        <li><a href="contact.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
 
 <!-- Booklet Modal -->
 <div id="bookletModal" class="modal">

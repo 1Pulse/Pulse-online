@@ -114,26 +114,41 @@
     display: flex; /* Default to flex for wide screens */
     list-style: none;
   }
-  
+  /*this is for styles Siya*/
+
+
   @media (max-width: 768px) {
     .nav-links {
       display: none; /* Hide links initially */
       flex-direction: column; /* Stack vertically */
       position: absolute;
-      padding-top:;
       background: #1a237e;
-      width: 100%;
-      padding:  150px 0  15px 0;
+      width: 100%;/*works with height as 500px*/
+      height: 400px;
+      padding:  170px 0  15px 0;
       z-index: 1; /* Ensure it appears on top */
     }
   
     .nav-links.active {
       display: flex; /* Show links when active */
+      left: 0px;
     }
   
-    .hamburger {
-      display: block; /* Show hamburger icon */
-    }
+   
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .close-btn {
+    display: f;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    float:left;
+  }
   }
   
 
@@ -490,3 +505,26 @@ footer .sitemap ul li a:hover {
 .cta-button:hover {
   background-color: #ff7979;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
