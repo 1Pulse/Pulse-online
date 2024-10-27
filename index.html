@@ -33,29 +33,56 @@
   
 
   <!-- Hero Section -->
-  <section class="hero-carousel">
-    <div class="carousel-slide">
+<!-- Hero Carousel -->
+<section class="hero-carousel">
+  <div class="carousel-slide">
+    <div class="carousel-item">
       <img src="images/20.jpg" alt="Community Empowerment">
-      <img src="images/23.jpg" alt="Neighborhood Safety">
-      <img src="images/24.jpg" alt="Inclusivity and Support">
+      <div class="hero-text">
+        <h2>Empowering Communities Together</h2>
+        <p>Join us in making neighborhoods safer and more united.</p>
+        <a href="#about" class="cta-button">Learn More</a>
+      </div>
     </div>
-    <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
-    <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
-  </section>
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide img');
+    <div class="carousel-item">
+      <img src="images/23.jpg" alt="Neighborhood Safety">
+      <div class="hero-text">
+        <h2>Strengthening Neighborhood Watch</h2>
+        <p>Be a part of your local neighborhood watch program.</p>
+        <a href="#registerWatch" class="cta-button">Register Now</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/24.jpg" alt="Inclusivity and Support">
+      <div class="hero-text">
+        <h2>Fostering Inclusivity</h2>
+        <p>We provide support and resources for everyone in our community.</p>
+        <a href="#africa-city" class="cta-button">Get Involved</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
+  <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
+</section>
 
-    function showSlide(n) {
-      currentSlide = (n + slides.length) % slides.length;
-      slides.forEach((slide, index) => {
-        slide.style.display = (index === currentSlide) ? 'block' : 'none';
-      });
-    }
-    function moveSlide(step) {
-      showSlide(currentSlide + step);
-    }
-    showSlide(currentSlide);
+  <script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+
+function showSlide(index) {
+  currentSlide = (index + slides.length) % slides.length;
+  const offset = -currentSlide * 100;
+  document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
+}
+
+function moveSlide(step) {
+  showSlide(currentSlide + step);
+}
+
+showSlide(currentSlide); // Show the initial slide
+
+
+
   </script>
 
   <div class="card-container">
